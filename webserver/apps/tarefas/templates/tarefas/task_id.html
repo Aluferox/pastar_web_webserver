@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+{#             One of three columns#}
+            </div>
+            <div class="col-sm-6 center_page aligned-center" >
+                <p><h1>Este é o Id da Sua Sequência.</h1></p><br>
+                <div class="input-group mb-3">
+
+                        <input type="text" class="form-control" value="{{ task_id }}">
+
+            <div class="input-group-append">
+                <button type="button" class="btn btn-link" onclick="myFunction()" style="color:dodgerblue">
+                    <b>Copiar</b>
+                </button>
+            </div>
+        </div>
+                <p><h2><a href="{% url 'consulta_seq' %}"> Consulte o Resultado Aqui.</a></h2></p>
+            </div>
+            <div class="col-sm">
+{#            One of three columns#}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block static %}
+    <script src="{% static 'js/colorir_sequencia.js' %}"></script>
+{% endblock static %}
+
